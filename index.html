@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Espelho | Renilza Miranda — Mentoria de Transformação</title>
+    <meta name="description" content="Mentoria de transformação de identidade e imagem para arquitetas. Descubra seu propósito, quebre crenças limitantes e projete a versão mais poderosa de você.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C5A572;
+            --gold-light: #D4B98A;
+            --gold-dark: #A68B5B;
+            --black: #1A1A1A;
+            --charcoal: #2D2D2D;
+            --dark-bg: #0D0D0D;
+            --cream: #FAF7F2;
+            --cream-dark: #F0EBE3;
+            --text-light: #E8E4DE;
+            --text-muted: #9A9590;
+            --white: #FFFFFF;
+            --serif: 'Cormorant Garamond', Georgia, serif;
+            --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            font-family: var(--sans);
+            color: var(--black);
+            background: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ===== UTILITY ===== */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        .text-center { text-align: center; }
+        .gold { color: var(--gold); }
+        .serif { font-family: var(--serif); }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--charcoal) 50%, #1a1510 100%);
+            color: var(--text-light);
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(197, 165, 114, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 6px 20px;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-subtitle {
+            font-family: var(--serif);
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            font-style: italic;
+        }
+
+        .hero-line {
+            width: 60px;
+            height: 1px;
+            background: var(--gold);
+            margin: 0 auto 40px;
+        }
+
+        .hero-description {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 680px;
+            margin: 0 auto 48px;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--dark-bg);
+            padding: 18px 48px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(197, 165, 114, 0.3);
+        }
+
+        .cta-btn-outline {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+        }
+
+        .cta-btn-outline:hover {
+            background: var(--gold);
+            color: var(--dark-bg);
+        }
+
+        /* ===== PROBLEM SECTION ===== */
+        .problem {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--black);
+        }
+
+        .section-line {
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+            margin-bottom: 40px;
+        }
+
+        .section-line.center { margin-left: auto; margin-right: auto; }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .problem-list { list-style: none; }
+
+        .problem-list li {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--cream-dark);
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            font-size: 1.02rem;
+            color: var(--charcoal);
+        }
+
+        .problem-list li::before {
+            content: '—';
+            color: var(--gold);
+            font-weight: 600;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .problem-quote {
+            background: var(--cream);
+            padding: 48px;
+            position: relative;
+        }
+
+        .problem-quote::before {
+            content: '"';
+            font-family: var(--serif);
+            font-size: 6rem;
+            color: var(--gold);
+            opacity: 0.3;
+            position: absolute;
+            top: 10px;
+            left: 24px;
+            line-height: 1;
+        }
+
+        .problem-quote p {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-style: italic;
+            line-height: 1.6;
+            color: var(--charcoal);
+            position: relative;
+            z-index: 1;
+        }
+
+        .problem-quote cite {
+            display: block;
+            margin-top: 20px;
+            font-family: var(--sans);
+            font-size: 0.85rem;
+            font-style: normal;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+
+        /* ===== TRANSFORMATION ===== */
+        .transformation {
+            padding: 100px 0;
+            background: var(--cream);
+        }
+
+        .transform-columns {
+            display: grid;
+            grid-template-columns: 1fr 60px 1fr;
+            gap: 0;
+            margin-top: 60px;
+            align-items: start;
+        }
+
+        .transform-col h3 {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .transform-col.before h3 { color: var(--text-muted); }
+        .transform-col.after h3 { color: var(--gold-dark); }
+
+        .transform-col ul {
+            list-style: none;
+        }
+
+        .transform-col ul li {
+            padding: 12px 0;
+            font-size: 0.95rem;
+            color: var(--charcoal);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .transform-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--gold);
+            padding-top: 60px;
+        }
+
+        /* ===== METHOD ===== */
+        .method {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--charcoal) 100%);
+            color: var(--text-light);
+        }
+
+        .method .section-title { color: var(--text-light); }
+
+        .phases-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .phase-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(197, 165, 114, 0.15);
+            padding: 40px 28px;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .phase-card:hover {
+            border-color: var(--gold);
+            background: rgba(197, 165, 114, 0.05);
+            transform: translateY(-4px);
+        }
+
+        .phase-number {
+            font-family: var(--serif);
+            font-size: 3rem;
+            color: var(--gold);
+            opacity: 0.4;
+            font-weight: 300;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .phase-card h3 {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+            color: var(--cream);
+        }
+
+        .phase-card p {
+            font-size: 0.88rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        .phase-topics {
+            list-style: none;
+            margin-top: 16px;
+        }
+
+        .phase-topics li {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            padding: 4px 0;
+            padding-left: 14px;
+            position: relative;
+        }
+
+        .phase-topics li::before {
+            content: '·';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* ===== WHAT'S INCLUDED ===== */
+        .included {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .included-item {
+            padding: 36px;
+            background: var(--cream);
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .included-item h4 {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: var(--black);
+        }
+
+        .included-item p {
+            font-size: 0.9rem;
+            color: var(--charcoal);
+            line-height: 1.7;
+        }
+
+        /* ===== ABOUT ===== */
+        .about {
+            padding: 100px 0;
+            background: var(--cream);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--dark-bg) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image-placeholder {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            color: var(--gold);
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .about-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .about-text h2 {
+            font-family: var(--serif);
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 24px;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--charcoal);
+            margin-bottom: 16px;
+        }
+
+        .about-credentials {
+            list-style: none;
+            margin-top: 32px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .about-credentials li {
+            font-size: 0.85rem;
+            color: var(--gold-dark);
+            font-weight: 500;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .about-credentials li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.6rem;
+            top: 3px;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .testimonial-card {
+            padding: 40px 32px;
+            background: var(--cream);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-family: var(--serif);
+            font-size: 4rem;
+            color: var(--gold);
+            opacity: 0.3;
+            position: absolute;
+            top: 16px;
+            left: 24px;
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-card p {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--charcoal);
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--black);
+        }
+
+        .testimonial-role {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* ===== PRICING ===== */
+        .pricing {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #1a1510 100%);
+            color: var(--text-light);
+        }
+
+        .pricing .section-title { color: var(--text-light); }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 60px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pricing-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(197, 165, 114, 0.2);
+            padding: 48px 40px;
+            text-align: center;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--gold);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--gold);
+            background: rgba(197, 165, 114, 0.06);
+        }
+
+        .pricing-card.featured::before {
+            content: 'MAIS ESCOLHIDO';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold);
+            color: var(--dark-bg);
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding: 4px 16px;
+        }
+
+        .pricing-name {
+            font-family: var(--serif);
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: var(--cream);
+        }
+
+        .pricing-sessions {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .pricing-value {
+            font-family: var(--serif);
+            font-size: 3.2rem;
+            font-weight: 600;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .pricing-value span {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .pricing-installment {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .pricing-card .cta-btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        /* ===== FAQ ===== */
+        .faq {
+            padding: 100px 0;
+            background: var(--cream);
+        }
+
+        .faq-list {
+            max-width: 750px;
+            margin: 60px auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            font-family: var(--sans);
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--black);
+            padding: 24px 0;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4rem;
+            color: var(--gold);
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            padding-bottom: 24px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--charcoal);
+        }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--charcoal) 100%);
+            color: var(--text-light);
+            text-align: center;
+            position: relative;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .final-cta h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .final-cta p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 48px;
+            font-weight: 300;
+        }
+
+        .guarantee {
+            margin-top: 40px;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 40px 0;
+            background: var(--dark-bg);
+            text-align: center;
+            border-top: 1px solid rgba(197, 165, 114, 0.1);
+        }
+
+        .footer p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 968px) {
+            .problem-grid,
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .phases-grid { grid-template-columns: repeat(2, 1fr); }
+            .included-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonials-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
+            .transform-columns { grid-template-columns: 1fr; gap: 20px; }
+            .transform-arrow { transform: rotate(90deg); padding: 0; }
+            .about-image { max-width: 400px; margin: 0 auto; }
+        }
+
+        @media (max-width: 640px) {
+            .hero { padding: 60px 0 80px; }
+            .phases-grid { grid-template-columns: 1fr; }
+            .included-grid { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
+            .about-credentials { grid-template-columns: 1fr; }
+            section { padding: 80px 0; }
+            .cta-btn { width: 100%; text-align: center; padding: 18px 32px; }
+        }
+
+        /* ===== STICKY HEADER ===== */
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            transform: translateY(-100%);
+            transition: transform 0.4s ease;
+            border-bottom: 1px solid rgba(197, 165, 114, 0.1);
+        }
+
+        .top-bar.visible { transform: translateY(0); }
+
+        .top-bar-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-logo {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        .top-bar .cta-btn {
+            padding: 10px 28px;
+            font-size: 0.72rem;
+        }
+
+        /* ===== ANIMATION ===== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- STICKY HEADER -->
+    <div class="top-bar" id="topBar">
+        <div class="top-bar-inner">
+            <span class="top-bar-logo">Método Espelho</span>
+            <a href="#investimento" class="cta-btn">Quero minha vaga</a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container text-center">
+            <div class="hero-badge">Mentoria Individual com Renilza Miranda</div>
+            <h1>Método <em>Espelho</em></h1>
+            <p class="hero-subtitle">Quando você transforma quem é por dentro,<br>o mundo muda o que vê por fora.</p>
+            <div class="hero-line"></div>
+            <p class="hero-description">
+                Uma mentoria profunda e individualizada para arquitetas que querem ir além do projeto técnico
+                — e projetar a versão mais autêntica, posicionada e magnética de si mesmas.
+                Identidade. Imagem. Propósito. Autoridade. Tudo conectado.
+            </p>
+            <a href="#investimento" class="cta-btn">Quero transformar minha carreira</a>
+        </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="problem">
+        <div class="container">
+            <div class="section-label text-center">O espelho não mente</div>
+            <h2 class="section-title text-center">Você reconhece alguma dessas situações?</h2>
+            <div class="section-line center"></div>
+
+            <div class="problem-grid">
+                <ul class="problem-list">
+                    <li>Tem talento e formação técnica, mas sente que o mercado não reconhece seu valor</li>
+                    <li>Aceita projetos abaixo do que merece porque não sabe como se posicionar</li>
+                    <li>Admira outros profissionais com menos experiência que conquistam clientes melhores</li>
+                    <li>Sabe que sua imagem não comunica a profissional que você realmente é</li>
+                    <li>Entra em reuniões com insegurança e sai justificando demais seus preços</li>
+                    <li>Quer construir uma rede de contatos estratégica, mas não sabe por onde começar</li>
+                </ul>
+
+                <div class="problem-quote">
+                    <p>O problema nunca foi falta de competência.<br>Foi falta de clareza sobre quem você é — e coragem para mostrar isso ao mundo.</p>
+                    <cite>— Renilza Miranda</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRANSFORMATION -->
+    <section class="transformation">
+        <div class="container">
+            <div class="section-label text-center">A transformação</div>
+            <h2 class="section-title text-center">De onde você está para onde pode chegar</h2>
+            <div class="section-line center"></div>
+
+            <div class="transform-columns">
+                <div class="transform-col before">
+                    <h3>Antes do Espelho</h3>
+                    <ul>
+                        <li>Identidade profissional confusa e genérica</li>
+                        <li>Imagem desconectada da autoridade técnica</li>
+                        <li>Preços baixos por medo de perder clientes</li>
+                        <li>Rede de contatos por acaso, não por estratégia</li>
+                        <li>Instagram como vitrine, não como ferramenta de posicionamento</li>
+                        <li>Crenças limitantes sobre merecimento e valor</li>
+                        <li>Postura insegura em reuniões e apresentações</li>
+                    </ul>
+                </div>
+                <div class="transform-arrow">→</div>
+                <div class="transform-col after">
+                    <h3>Depois do Espelho</h3>
+                    <ul>
+                        <li>Manifesto profissional claro e magnético</li>
+                        <li>Imagem que comunica autoridade antes de você falar</li>
+                        <li>Precificação firme, sem justificativa nem desconto</li>
+                        <li>Rede estratégica com arquitetos, lojas e corretores</li>
+                        <li>Presença digital que atrai o cliente ideal</li>
+                        <li>Mentalidade de abundância e propósito definido</li>
+                        <li>Postura impecável que transmite segurança e elegância</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METHOD -->
+    <section class="method" id="metodo">
+        <div class="container">
+            <div class="section-label text-center">O método</div>
+            <h2 class="section-title text-center">4 fases que transformam sua carreira<br><em class="serif" style="color: var(--gold); font-style: italic;">de dentro pra fora</em></h2>
+            <div class="section-line center" style="background: var(--gold);"></div>
+
+            <div class="phases-grid">
+                <div class="phase-card fade-up">
+                    <div class="phase-number">01</div>
+                    <h3>Identidade &<br>Posicionamento</h3>
+                    <p>Descobrir sua assinatura profissional e construir uma identidade que é só sua.</p>
+                    <ul class="phase-topics">
+                        <li>Manifesto profissional de 10 linhas</li>
+                        <li>Painel visual de referências</li>
+                        <li>Diagnóstico de imagem pessoal</li>
+                        <li>Códigos visuais por ocasião</li>
+                        <li>Psicologia por trás do vestuário</li>
+                    </ul>
+                </div>
+
+                <div class="phase-card fade-up">
+                    <div class="phase-number">02</div>
+                    <h3>Leitura de<br>Mercado</h3>
+                    <p>Entender onde você se encaixa e como atacar o mercado com inteligência.</p>
+                    <ul class="phase-topics">
+                        <li>Mapeamento de bairros estratégicos</li>
+                        <li>Análise de perfil socioeconômico</li>
+                        <li>Definição de nicho e ticket médio</li>
+                        <li>Frase de posicionamento magnética</li>
+                        <li>Estratégia de entrada no círculo social</li>
+                    </ul>
+                </div>
+
+                <div class="phase-card fade-up">
+                    <div class="phase-number">03</div>
+                    <h3>Autoridade &<br>Presença</h3>
+                    <p>Construir autoridade real que atrai clientes sem precisar correr atrás deles.</p>
+                    <ul class="phase-topics">
+                        <li>Instagram estratégico (bio, destaques, feed)</li>
+                        <li>Treinamento de postura em vídeo</li>
+                        <li>Simulação de precificação e negociação</li>
+                        <li>Correção de linguagem corporal</li>
+                        <li>Segurança ao apresentar e defender valor</li>
+                    </ul>
+                </div>
+
+                <div class="phase-card fade-up">
+                    <div class="phase-number">04</div>
+                    <h3>Network &<br>Expansão</h3>
+                    <p>Criar conexões estratégicas e uma presença que multiplica oportunidades.</p>
+                    <ul class="phase-topics">
+                        <li>Lista de contatos estratégicos</li>
+                        <li>Metas semanais de networking</li>
+                        <li>Simulação de reunião gravada</li>
+                        <li>Treino de apresentação de projetos</li>
+                        <li>Plano de expansão a 12 meses</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section class="included">
+        <div class="container">
+            <div class="section-label text-center">O que você recebe</div>
+            <h2 class="section-title text-center">Cada detalhe pensado para sua transformação</h2>
+            <div class="section-line center"></div>
+
+            <div class="included-grid">
+                <div class="included-item fade-up">
+                    <h4>Encontros individuais ao vivo</h4>
+                    <p>Sessões de 1h via Zoom, 100% focadas em você. Nada de turma — toda a atenção é sua. Cada encontro tem tema, exercício prático e meta da semana.</p>
+                </div>
+                <div class="included-item fade-up">
+                    <h4>Exercícios práticos entre sessões</h4>
+                    <p>Manifesto profissional, painel visual, mapeamento de mercado, gravação de vídeos para análise. Mentoria não é teoria — é lapidação.</p>
+                </div>
+                <div class="included-item fade-up">
+                    <h4>Diagnóstico completo de imagem</h4>
+                    <p>Análise de modelagem, estrutura, cores e acessórios. Guia personalizado de códigos visuais para reunião, obra, evento e vida social.</p>
+                </div>
+                <div class="included-item fade-up">
+                    <h4>Simulações reais de negociação</h4>
+                    <p>Eu faço o papel de cliente difícil. Questiono preço, peço desconto, comparo com concorrente. Você treina até ficar impecável.</p>
+                </div>
+                <div class="included-item fade-up">
+                    <h4>Feedback técnico personalizado</h4>
+                    <p>Análise de postura, clareza, segurança, linguagem corporal e tom de voz em apresentações gravadas. Ajuste estratégico fino.</p>
+                </div>
+                <div class="included-item fade-up">
+                    <h4>Suporte via WhatsApp</h4>
+                    <p>Acesso direto a mim para dúvidas entre os encontros. Orientação em tempo real para situações do dia a dia profissional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        Foto da<br>Renilza Miranda
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="section-label">Quem vai te guiar</div>
+                    <h2>Renilza <em class="serif" style="color: var(--gold); font-style: italic;">Miranda</em></h2>
+                    <p>
+                        Consultora de imagem com formação em metodologia francesa no Brasil e aprofundamento na Bela Artes.
+                        Em 2026, faz nova especialização na França — porque a busca por excelência não para.
+                    </p>
+                    <p>
+                        Antes de se tornar consultora, atendia público de luxo como esteticista e massoterapeuta.
+                        Foi ali que entendeu: a forma como você se apresenta ao mundo muda completamente a forma como o mundo te recebe.
+                    </p>
+                    <p>
+                        Criou a Mentoria 360, que já transformou a vida de dezenas de mulheres em 5 pilares: crença, imagem, atendimento, redes sociais e vendas.
+                        Hoje vive como nômade digital entre Dubai, Itália e Europa — e traz essa visão internacional para cada orientação.
+                    </p>
+                    <ul class="about-credentials">
+                        <li>Formação em escola francesa</li>
+                        <li>Especialização Bela Artes</li>
+                        <li>Nova formação na França (2026)</li>
+                        <li>Criadora da Mentoria 360</li>
+                        <li>Experiência com público de luxo</li>
+                        <li>Vivência internacional</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-label text-center">Quem já se transformou</div>
+            <h2 class="section-title text-center">O reflexo de quem olhou para dentro</h2>
+            <div class="section-line center"></div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-up">
+                    <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                    <p>Eu sabia que era boa tecnicamente, mas não conseguia transmitir isso. Depois da mentoria, meu posicionamento mudou completamente. Fechei meu primeiro projeto acima de R$100 mil no mês seguinte.</p>
+                    <div class="testimonial-author">Carolina M.</div>
+                    <div class="testimonial-role">Arquiteta, Brasília</div>
+                </div>
+                <div class="testimonial-card fade-up">
+                    <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                    <p>A simulação de negociação foi o divisor de águas. Descobri que eu justificava demais meu preço. Hoje cobro o dobro e meus clientes percebem mais valor. Obrigada, Renilza.</p>
+                    <div class="testimonial-author">Patrícia R.</div>
+                    <div class="testimonial-role">Arquiteta de Interiores, Asa Sul</div>
+                </div>
+                <div class="testimonial-card fade-up">
+                    <div class="testimonial-stars">★ ★ ★ ★ ★</div>
+                    <p>Eu não acreditava que imagem pessoal pudesse impactar tanto minha carreira. A Renilza me mostrou que autoridade se comunica antes da fala. Hoje entro em qualquer reunião com segurança total.</p>
+                    <div class="testimonial-author">Fernanda L.</div>
+                    <div class="testimonial-role">Arquiteta, Lago Sul</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing" id="investimento">
+        <div class="container">
+            <div class="section-label text-center">Investimento</div>
+            <h2 class="section-title text-center">Escolha o caminho da sua transformação</h2>
+            <div class="section-line center" style="background: var(--gold);"></div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-name">Essencial</div>
+                    <div class="pricing-sessions">4 encontros individuais</div>
+                    <div class="pricing-value"><span>R$</span>6.997</div>
+                    <div class="pricing-installment">ou 12x de R$ 699,70</div>
+                    <ul class="pricing-features">
+                        <li>4 sessões individuais de 1h (Zoom)</li>
+                        <li>Diagnóstico completo de imagem</li>
+                        <li>Manifesto profissional</li>
+                        <li>Guia de códigos visuais</li>
+                        <li>Frase de posicionamento</li>
+                        <li>Exercícios práticos entre sessões</li>
+                        <li>Suporte WhatsApp por 30 dias</li>
+                    </ul>
+                    <a href="#contato" class="cta-btn cta-btn-outline" style="display:block;">Quero o Essencial</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-name">Completo</div>
+                    <div class="pricing-sessions">8 encontros individuais</div>
+                    <div class="pricing-value"><span>R$</span>9.997</div>
+                    <div class="pricing-installment">ou 12x de R$ 999,70</div>
+                    <ul class="pricing-features">
+                        <li>8 sessões individuais de 1h (Zoom)</li>
+                        <li>Diagnóstico completo de imagem</li>
+                        <li>Manifesto profissional</li>
+                        <li>Guia de códigos visuais por ocasião</li>
+                        <li>Frase de posicionamento magnética</li>
+                        <li>Simulações de negociação</li>
+                        <li>Treino de apresentação gravado</li>
+                        <li>Plano de networking estratégico</li>
+                        <li>Plano de expansão 12 meses</li>
+                        <li>Suporte WhatsApp por 60 dias</li>
+                    </ul>
+                    <a href="#contato" class="cta-btn" style="display:block;">Quero o Completo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-label text-center">Dúvidas frequentes</div>
+            <h2 class="section-title text-center">Perguntas que podem estar<br>na sua mente agora</h2>
+            <div class="section-line center"></div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">A mentoria é só para arquitetas?</button>
+                    <div class="faq-answer">
+                        <p>O Método Espelho foi desenhado para profissionais que querem transformar sua identidade, imagem e posicionamento. Embora tenha foco especial em arquitetas, o método se aplica a qualquer profissional liberal que queira se posicionar com mais autoridade e autenticidade no mercado.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Preciso estar em Brasília para participar?</button>
+                    <div class="faq-answer">
+                        <p>Não. Todos os encontros são individuais via Zoom. Você pode participar de qualquer lugar do Brasil ou do mundo. Os exercícios práticos de mapeamento de mercado serão adaptados para sua cidade.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Qual a diferença entre o plano Essencial e o Completo?</button>
+                    <div class="faq-answer">
+                        <p>O Essencial (4 encontros) cobre as fases 1 e 2: identidade, posicionamento, imagem e leitura de mercado. O Completo (8 encontros) inclui também as fases 3 e 4: autoridade, simulações de negociação, treino de apresentação, networking estratégico e plano de expansão a 12 meses. Se você quer uma transformação completa, o Completo é a escolha certa.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Quanto tempo dura cada encontro?</button>
+                    <div class="faq-answer">
+                        <p>Cada sessão tem 1 hora de duração. Os encontros são semanais, então o plano Essencial dura 1 mês e o Completo dura 2 meses. Entre os encontros, você recebe exercícios práticos e tem suporte via WhatsApp.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">E se eu não gostar?</button>
+                    <div class="faq-answer">
+                        <p>Você tem 7 dias de garantia incondicional após o primeiro encontro. Se sentir que a mentoria não é para você, devolvemos 100% do valor investido. Sem burocracia, sem perguntas.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Posso parcelar?</button>
+                    <div class="faq-answer">
+                        <p>Sim. O plano Essencial pode ser parcelado em até 12x de R$ 699,70 e o Completo em até 12x de R$ 999,70 no cartão de crédito. Também aceitamos PIX à vista com condições especiais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="contato">
+        <div class="container">
+            <h2 class="serif">O espelho já mostrou quem você é.<br>Agora é hora de mostrar ao <em style="color: var(--gold); font-style: italic;">mundo</em>.</h2>
+            <p>Vagas limitadas para garantir atenção 100% individualizada. Se essa página está no ar, ainda há espaço para você.</p>
+            <a href="https://wa.me/5511943044046?text=Ol%C3%A1%20Renilza%2C%20tenho%20interesse%20no%20M%C3%A9todo%20Espelho!" class="cta-btn">Falar com a Renilza no WhatsApp</a>
+            <div class="guarantee">Garantia incondicional de 7 dias. Seu investimento está protegido.</div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>Método Espelho &copy; 2026 — <a href="https://instagram.com/renilzamirandaa" target="_blank">@renilzamirandaa</a></p>
+            <p style="margin-top: 8px; font-size: 0.72rem;">Renilza Miranda — Consultora de Imagem | Formação Escola Francesa</p>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky header on scroll
+        const topBar = document.getElementById('topBar');
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 500) {
+                topBar.classList.add('visible');
+            } else {
+                topBar.classList.remove('visible');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // Fade-up animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
