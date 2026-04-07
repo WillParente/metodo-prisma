@@ -47,9 +47,43 @@
         .hero {
             background: linear-gradient(135deg, var(--dark-bg) 0%, var(--charcoal) 50%, #1a1510 100%);
             color: var(--text-light);
-            padding: 80px 0 100px;
+            padding: 0;
             position: relative;
             overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 90vh;
+        }
+
+        .hero-content {
+            padding: 80px 48px 80px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: calc((100vw - 1100px) / 2 + 24px);
+        }
+
+        .hero-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            filter: grayscale(0.3);
+        }
+
+        .hero-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--dark-bg) 0%, transparent 30%, transparent 100%);
         }
 
         .hero::before {
@@ -427,21 +461,15 @@
         .about-image {
             width: 100%;
             aspect-ratio: 3/4;
-            background: linear-gradient(135deg, var(--charcoal) 0%, var(--dark-bg) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
             position: relative;
             overflow: hidden;
         }
 
-        .about-image-placeholder {
-            font-family: var(--serif);
-            font-size: 1.2rem;
-            color: var(--gold);
-            font-style: italic;
-            text-align: center;
-            padding: 20px;
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
         }
 
         .about-image::after {
@@ -789,6 +817,11 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 968px) {
+            .hero { grid-template-columns: 1fr; min-height: auto; }
+            .hero-content { padding: 60px 24px 40px; text-align: center; }
+            .hero-content .hero-line { margin: 0 auto 40px; }
+            .hero-image { max-height: 400px; }
+            .hero-image::after { background: linear-gradient(180deg, var(--dark-bg) 0%, transparent 20%, transparent 80%, var(--dark-bg) 100%); }
             .problem-grid,
             .about-grid { grid-template-columns: 1fr; gap: 40px; }
             .phases-grid { grid-template-columns: repeat(2, 1fr); }
@@ -800,7 +833,6 @@
         }
 
         @media (max-width: 640px) {
-            .hero { padding: 60px 0 80px; }
             .phases-grid { grid-template-columns: 1fr; }
             .included-grid { grid-template-columns: 1fr; }
             .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
@@ -872,7 +904,7 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="container text-center">
+        <div class="hero-content">
             <div class="hero-badge">Mentoria Individual com Renilza Miranda</div>
             <h1>Método <em>Prisma</em></h1>
             <p class="hero-subtitle">Identidade. Comportamento. Imagem.<br>Três dimensões, uma só transformação.</p>
@@ -883,6 +915,9 @@
                 e a comunicar isso pro mundo com clareza, segurança e presença.
             </p>
             <a href="#investimento" class="cta-btn">Quero começar minha transformação</a>
+        </div>
+        <div class="hero-image">
+            <img src="foto3.jpeg" alt="Renilza Miranda — Consultora de Imagem">
         </div>
     </section>
 
@@ -1052,9 +1087,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <div class="about-image-placeholder">
-                        Foto da<br>Renilza Miranda
-                    </div>
+                    <img src="foto2.jpeg" alt="Renilza Miranda — Consultora de Imagem">
                 </div>
                 <div class="about-text">
                     <div class="section-label">Quem vai te guiar</div>
