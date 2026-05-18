@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Método Prisma | Renilza Miranda — Mentoria de Transformação</title>
-    <meta name="description" content="Mentoria individual de identidade, comportamento e imagem. Descubra quem você realmente é e aprenda a mostrar isso ao mundo.">
+    <title>Método Prisma | Renilza Miranda</title>
+    <meta name="description" content="Uma mentoria íntima sobre identidade, presença e a forma como você se enxerga. Para a mulher que quer alinhar quem ela é por dentro com a vida que está construindo por fora.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -33,8 +33,37 @@
             font-family: var(--sans);
             color: var(--black);
             background: var(--cream);
-            line-height: 1.7;
+            line-height: 1.75;
             overflow-x: hidden;
+            font-weight: 300;
+        }
+
+        /* ===== TIPO DE TEXTO ===== */
+        .whisper {
+            font-family: var(--serif);
+            font-style: italic;
+            color: var(--gold);
+            display: block;
+            margin: 8px 0 24px;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+        }
+
+        .breath {
+            display: block;
+            width: 1px;
+            height: 32px;
+            background: var(--gold);
+            opacity: 0.4;
+            margin: 32px auto;
+        }
+
+        p.intimate {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            line-height: 1.7;
+            font-style: italic;
+            color: var(--charcoal);
         }
 
         /* ===== UTILITY ===== */
@@ -619,17 +648,19 @@
         }
 
         .pricing-card.featured::before {
-            content: 'MAIS ESCOLHIDO';
+            content: 'A travessia inteira';
             position: absolute;
             top: -12px;
             left: 50%;
             transform: translateX(-50%);
             background: var(--gold);
             color: var(--dark-bg);
-            font-size: 0.65rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            padding: 4px 16px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            padding: 5px 18px;
+            font-family: var(--serif);
+            font-style: italic;
         }
 
         .pricing-name {
@@ -898,49 +929,52 @@
     <div class="top-bar" id="topBar">
         <div class="top-bar-inner">
             <span class="top-bar-logo">Método Prisma</span>
-            <a href="#investimento" class="cta-btn">Quero minha vaga</a>
+            <a href="#investimento" class="cta-btn">Conversar comigo</a>
         </div>
     </div>
 
     <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">Mentoria Individual com Renilza Miranda</div>
+            <div class="hero-badge">Uma conversa com Renilza Miranda</div>
             <h1>Método <em>Prisma</em></h1>
-            <p class="hero-subtitle">Identidade. Comportamento. Imagem.<br>Três dimensões, uma só transformação.</p>
+            <p class="hero-subtitle">Para a mulher que cansou de tentar parecer<br>e está pronta para, enfim, ser.</p>
             <div class="hero-line"></div>
             <p class="hero-description">
-                Um prisma pega uma luz branca e revela todas as cores que já estavam ali dentro.
-                É isso que essa mentoria faz com você. Te ajuda a enxergar quem você já é
-                e a comunicar isso pro mundo com clareza, segurança e presença.
+                Tem mulheres que mudam a aparência.<br>
+                Outras mudam a presença.
             </p>
-            <a href="#investimento" class="cta-btn">Quero começar minha transformação</a>
+            <p class="hero-description" style="margin-top: -24px;">
+                Esta mentoria é um espaço íntimo para alinhar três coisas que raramente conversam entre si:
+                quem você é por dentro, como você se comporta no mundo, e a imagem que carrega quando entra numa sala.
+            </p>
+            <a href="#investimento" class="cta-btn">Quero conversar com você</a>
         </div>
         <div class="hero-image">
-            <img src="foto3.jpeg" alt="Renilza Miranda — Consultora de Imagem">
+            <img src="foto3.jpeg" alt="Renilza Miranda">
         </div>
     </section>
 
     <!-- PROBLEM -->
     <section class="problem">
         <div class="container">
-            <div class="section-label text-center">Vamos ser sinceras</div>
-            <h2 class="section-title text-center">Isso soa familiar?</h2>
+            <div class="section-label text-center">Antes de qualquer coisa</div>
+            <h2 class="section-title text-center">Talvez você não fale isso<br>em voz alta. Mas sente.</h2>
             <div class="section-line center"></div>
 
             <div class="problem-grid">
                 <ul class="problem-list">
-                    <li>Você é boa no que faz, mas parece que ninguém nota</li>
-                    <li>Vive aceitando projetos que pagam menos do que você vale</li>
-                    <li>Vê gente com metade da sua experiência fechando clientes que você queria</li>
-                    <li>Olha no espelho e sabe que sua imagem não conta a história certa sobre você</li>
-                    <li>Entra em reunião já pensando em como justificar o preço, antes mesmo de apresentar</li>
-                    <li>Quer crescer, fazer contatos, mas trava na hora de se colocar</li>
+                    <li>Você sabe que é boa. Só que ninguém parece enxergar isso na velocidade que devia.</li>
+                    <li>Olha no espelho e sente que a imagem não combina mais com a mulher que você está virando.</li>
+                    <li>Tem dias em que pensa: <em>"quem sou eu pra cobrar isso?"</em> — e baixa o preço sozinha.</li>
+                    <li>Vê mulheres com metade da sua história sendo notadas o dobro.</li>
+                    <li>Quer construir uma rede, uma presença, uma vida maior. Mas trava na hora de se mostrar.</li>
+                    <li>Sente que a vida lá fora não está acompanhando o que já mudou dentro de você.</li>
                 </ul>
 
                 <div class="problem-quote">
-                    <p>Seu problema não é falta de talento.<br>É que ninguém te ensinou a mostrar quem você já é.</p>
-                    <cite>— Renilza Miranda</cite>
+                    <p>O problema nunca foi você não ser o bastante.<br>É que ninguém te mostrou como deixar essa mulher aparecer.</p>
+                    <cite>— Renilza</cite>
                 </div>
             </div>
         </div>
@@ -949,34 +983,38 @@
     <!-- TRANSFORMATION -->
     <section class="transformation">
         <div class="container">
-            <div class="section-label text-center">O que muda</div>
-            <h2 class="section-title text-center">Você hoje vs. você depois do Prisma</h2>
+            <div class="section-label text-center">O movimento silencioso</div>
+            <h2 class="section-title text-center">Não é sobre virar outra mulher.<br>É sobre parar de esconder essa.</h2>
             <div class="section-line center"></div>
+            <p class="intimate text-center" style="max-width: 620px; margin: 0 auto 24px;">
+                Algumas mulheres mudam a aparência.<br>
+                As que ficam, mudam a forma como se enxergam.
+            </p>
 
             <div class="transform-columns">
                 <div class="transform-col before">
                     <h3>Antes</h3>
                     <ul>
-                        <li>Não sabe explicar o que te diferencia das outras</li>
-                        <li>Sua roupa diz uma coisa, seu trabalho diz outra</li>
-                        <li>Cobra barato porque tem medo de ouvir "não"</li>
-                        <li>Conhece gente, mas não tem uma rede que trabalha por você</li>
-                        <li>Posta no Instagram sem saber se está ajudando ou atrapalhando</li>
-                        <li>Aquela voz na cabeça dizendo "quem sou eu pra cobrar isso"</li>
-                        <li>Entra em reunião e já quer sair logo</li>
+                        <li>Você se explica demais. Sempre.</li>
+                        <li>A roupa diz uma coisa. Seu trabalho, outra. Você, outra ainda.</li>
+                        <li>Cobra menos pra não ouvir um "não".</li>
+                        <li>Conhece gente. Mas ninguém te lembra na hora certa.</li>
+                        <li>Posta sem saber direito por quê. E apaga depois.</li>
+                        <li>Entra na sala já querendo sair.</li>
+                        <li>Sente que está sempre fora do lugar — sem entender onde é o seu.</li>
                     </ul>
                 </div>
                 <div class="transform-arrow">→</div>
                 <div class="transform-col after">
                     <h3>Depois</h3>
                     <ul>
-                        <li>Sabe exatamente quem é e como quer ser percebida</li>
-                        <li>Sua imagem fala por você antes de abrir a boca</li>
-                        <li>Fala o preço olhando nos olhos, sem desconto</li>
-                        <li>Tem contatos certos nos lugares certos</li>
-                        <li>Sua presença online atrai quem você quer atender</li>
-                        <li>Sabe o que vale e não precisa convencer ninguém disso</li>
-                        <li>Chega numa sala e as pessoas prestam atenção</li>
+                        <li>Você se reconhece. Antes de tudo, isso.</li>
+                        <li>Imagem, fala e presença conversando entre si.</li>
+                        <li>Diz o valor sem suavizar. E sem precisar pedir desculpas.</li>
+                        <li>Ocupa espaços que antes pareciam grandes demais.</li>
+                        <li>O que você compartilha começa a atrair quem é da sua frequência.</li>
+                        <li>Não precisa convencer ninguém de nada. Só ser vista do jeito certo.</li>
+                        <li>Entra num lugar e a sala muda um pouco. Sem esforço.</li>
                     </ul>
                 </div>
             </div>
@@ -986,60 +1024,64 @@
     <!-- METHOD -->
     <section class="method" id="metodo">
         <div class="container">
-            <div class="section-label text-center">Como funciona</div>
-            <h2 class="section-title text-center">4 fases pra você se reconhecer<br><em class="serif" style="color: var(--gold); font-style: italic;">e ser reconhecida</em></h2>
+            <div class="section-label text-center">Por dentro</div>
+            <h2 class="section-title text-center">Quatro passagens.<br><em class="serif" style="color: var(--gold); font-style: italic;">Uma travessia.</em></h2>
             <div class="section-line center" style="background: var(--gold);"></div>
+            <p class="intimate text-center" style="max-width: 620px; margin: 0 auto 24px; color: var(--text-muted);">
+                Não é um curso. É uma conversa que dura algumas semanas<br>
+                e muda a forma como você se trata pelo resto da vida.
+            </p>
 
             <div class="phases-grid">
                 <div class="phase-card fade-up">
                     <div class="phase-number">01</div>
-                    <h3>Identidade &<br>Posicionamento</h3>
-                    <p>Quem é você de verdade? Aqui a gente descobre e coloca no papel.</p>
+                    <h3>Quem você é<br>quando ninguém olha</h3>
+                    <p>A gente começa por dentro. Sem isso, qualquer mudança lá fora vira fantasia.</p>
                     <ul class="phase-topics">
-                        <li>Seu manifesto profissional (em 10 linhas)</li>
-                        <li>Painel visual de referências</li>
-                        <li>Diagnóstico completo de imagem</li>
-                        <li>O que vestir em cada situação</li>
-                        <li>Por que você veste o que veste (e o que isso diz)</li>
+                        <li>Seu manifesto — em 10 linhas que parecem verdade</li>
+                        <li>O painel visual da mulher que você está virando</li>
+                        <li>Diagnóstico honesto da sua imagem hoje</li>
+                        <li>Como vestir o que combina com você (não com a tendência)</li>
+                        <li>O que sua roupa anda dizendo sem te avisar</li>
                     </ul>
                 </div>
 
                 <div class="phase-card fade-up">
                     <div class="phase-number">02</div>
-                    <h3>Leitura de<br>Mercado</h3>
-                    <p>Onde estão as oportunidades? Quem é seu cliente ideal? Vamos mapear.</p>
+                    <h3>O lugar onde<br>você quer ser vista</h3>
+                    <p>Cada mulher tem um mundo onde sua presença faz mais sentido. A gente encontra o seu.</p>
                     <ul class="phase-topics">
-                        <li>Mapeamento da sua região e bairros-chave</li>
-                        <li>Perfil do cliente que você quer atrair</li>
-                        <li>Seu nicho e quanto cobrar</li>
-                        <li>A frase que vai te posicionar no mercado</li>
-                        <li>Como entrar nos círculos certos</li>
+                        <li>Quem é a pessoa que você quer atrair de verdade</li>
+                        <li>Os ambientes, bairros, ciclos que combinam com você</li>
+                        <li>Quanto cobrar sem se encolher</li>
+                        <li>A frase que vira sua assinatura</li>
+                        <li>Como circular por dentro dos círculos certos</li>
                     </ul>
                 </div>
 
                 <div class="phase-card fade-up">
                     <div class="phase-number">03</div>
-                    <h3>Autoridade &<br>Presença</h3>
-                    <p>Chega de correr atrás de cliente. Aqui você aprende a atrair.</p>
+                    <h3>A presença que<br>fala antes de você</h3>
+                    <p>Aqui a gente alinha imagem e comportamento. E você para de precisar se explicar.</p>
                     <ul class="phase-topics">
-                        <li>Instagram que funciona (bio, destaques, feed)</li>
-                        <li>Como se portar em vídeo</li>
-                        <li>Treino de negociação e precificação</li>
-                        <li>Ajuste de linguagem corporal</li>
-                        <li>Apresentar e defender seu valor com firmeza</li>
+                        <li>Um Instagram que parece você (não uma vitrine)</li>
+                        <li>Como se portar em vídeo sem ficar travada</li>
+                        <li>Conversar sobre dinheiro sem perder a doçura</li>
+                        <li>O ajuste fino da postura, do olhar, do silêncio</li>
+                        <li>Dizer seu valor olhando nos olhos</li>
                     </ul>
                 </div>
 
                 <div class="phase-card fade-up">
                     <div class="phase-number">04</div>
-                    <h3>Network &<br>Expansão</h3>
-                    <p>Oportunidade não cai do céu. A gente constrói o caminho até ela.</p>
+                    <h3>A vida que se<br>abre depois disso</h3>
+                    <p>Mulher alinhada não corre atrás de oportunidade. Ela ocupa o espaço dela.</p>
                     <ul class="phase-topics">
-                        <li>Sua lista de contatos estratégicos</li>
-                        <li>Metas de networking semana a semana</li>
-                        <li>Simulação de reunião (gravada pra análise)</li>
-                        <li>Treino de apresentação de projeto</li>
-                        <li>Seu plano de crescimento pros próximos 12 meses</li>
+                        <li>As pessoas certas pra estar perto neste próximo ano</li>
+                        <li>Movimentos de networking que cabem na sua rotina</li>
+                        <li>Uma reunião simulada e revisada com calma</li>
+                        <li>Como apresentar projetos como quem é dona da história</li>
+                        <li>Seu plano dos próximos 12 meses — feito por você, pra você</li>
                     </ul>
                 </div>
             </div>
@@ -1049,34 +1091,34 @@
     <!-- WHAT'S INCLUDED -->
     <section class="included">
         <div class="container">
-            <div class="section-label text-center">O que está incluído</div>
-            <h2 class="section-title text-center">Tudo que você leva com a mentoria</h2>
+            <div class="section-label text-center">O que vive entre a gente</div>
+            <h2 class="section-title text-center">O que você leva de mim.<br>E o que você leva de você.</h2>
             <div class="section-line center"></div>
 
             <div class="included-grid">
                 <div class="included-item fade-up">
-                    <h4>Encontros individuais ao vivo</h4>
-                    <p>1 hora por sessão, só eu e você, via Zoom. Sem turma, sem dividir atenção. Cada encontro tem um tema, um exercício e uma meta pra semana.</p>
+                    <h4>Encontros, só nossos</h4>
+                    <p>Uma hora por semana, ao vivo, via Zoom. Sem turma, sem espectadora. Cada encontro tem uma pergunta, um movimento e um silêncio pra você processar.</p>
                 </div>
                 <div class="included-item fade-up">
-                    <h4>Exercícios entre as sessões</h4>
-                    <p>Manifesto profissional, painel visual, mapeamento de mercado, gravação de vídeo. Aqui a gente pratica, não só conversa.</p>
+                    <h4>O que faço entre uma sessão e outra</h4>
+                    <p>Pequenos exercícios pra você habitar. Um manifesto. Um painel. Um vídeo gravado pra você se ver. Aqui não é só conversa — é prática delicada.</p>
                 </div>
                 <div class="included-item fade-up">
-                    <h4>Diagnóstico completo de imagem</h4>
-                    <p>Análise de modelagem, cores, acessórios e estrutura. Você sai com um guia do que vestir em cada situação: reunião, obra, evento, dia a dia.</p>
+                    <h4>Um olhar honesto sobre sua imagem</h4>
+                    <p>Modelagem, cores, materiais, acessórios. Você sai entendendo por que algumas peças te elevam — e por que outras te encolhem.</p>
                 </div>
                 <div class="included-item fade-up">
-                    <h4>Simulação de negociação</h4>
-                    <p>Eu viro a cliente difícil. Questiono seu preço, peço desconto, comparo com concorrente. A gente treina até você se sentir firme.</p>
+                    <h4>A conversa que ninguém te ensinou</h4>
+                    <p>Eu te ajudo a falar de dinheiro, valor e limites sem perder a leveza. A gente treina até a voz parar de tremer.</p>
                 </div>
                 <div class="included-item fade-up">
-                    <h4>Feedback de postura e comunicação</h4>
-                    <p>Analiso sua postura, linguagem corporal, tom de voz e clareza em vídeos que você grava. Te dou o retorno detalhado pra ajustar.</p>
+                    <h4>Devolutiva sobre como você se mostra</h4>
+                    <p>Postura, gesto, olhar, ritmo. Te devolvo o que vejo, com cuidado. Pra você fazer escolhas — não correções.</p>
                 </div>
                 <div class="included-item fade-up">
-                    <h4>Suporte via WhatsApp</h4>
-                    <p>Acesso direto a mim entre os encontros. Surgiu uma dúvida antes de uma reunião importante? Me manda mensagem.</p>
+                    <h4>Eu, por perto</h4>
+                    <p>WhatsApp aberto entre os encontros. Pra uma reunião, uma dúvida, uma vontade de desistir. Você não atravessa isso sozinha.</p>
                 </div>
             </div>
         </div>
@@ -1087,30 +1129,33 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="foto2.jpeg" alt="Renilza Miranda — Consultora de Imagem">
+                    <img src="foto2.jpeg" alt="Renilza Miranda">
                 </div>
                 <div class="about-text">
-                    <div class="section-label">Quem vai te guiar</div>
+                    <div class="section-label">Quem te recebe aqui</div>
                     <h2>Renilza <em class="serif" style="color: var(--gold); font-style: italic;">Miranda</em></h2>
-                    <p>
-                        Consultora de imagem formada em metodologia francesa, com especialização na Bela Artes em São Paulo.
-                        Em 2026 está fazendo nova formação na França, porque parar de estudar nunca foi uma opção.
+                    <p class="intimate" style="font-size: 1.15rem; margin-bottom: 24px;">
+                        Em algum momento eu percebi que minha vida começou a mudar quando parei de tentar parecer algo — e comecei a alinhar quem eu era.
                     </p>
                     <p>
-                        Antes da consultoria, trabalhou anos atendendo público de alto padrão como esteticista e massoterapeuta.
-                        Foi aí que caiu a ficha. A maneira como você se apresenta muda completamente a forma como te tratam.
+                        Por anos eu atendi mulheres de alto padrão como esteticista e massoterapeuta. Foi nessas salas silenciosas que eu entendi uma coisa que ninguém me ensinou antes: a forma como você se apresenta muda completamente a forma como te tratam. E mais fundo do que isso — muda a forma como você se trata.
                     </p>
                     <p>
-                        Saiu de São Paulo, morou em Dubai e hoje vive na Europa como nômade digital.
-                        Criou a Mentoria 360, que já transformou dezenas de mulheres em 5 frentes: crença, imagem, atendimento, redes sociais e vendas.
-                        Essa vivência internacional está em tudo que ela ensina.
+                        Estudei imagem em metodologia francesa, me especializei na Belas Artes, e em 2026 volto pra estudar na França. Não porque me falta diploma. Porque estudar virou parte de quem eu sou.
+                    </p>
+                    <p>
+                        Saí de São Paulo, morei em Dubai, hoje vivo entre cidades na Europa. Dessa travessia nasceu a forma como eu trabalho: sem fórmula, com método. Atenta ao detalhe. Cuidando uma mulher de cada vez.
+                    </p>
+                    <p class="intimate" style="font-size: 1.05rem; color: var(--gold-dark); margin-top: 24px;">
+                        Eu não te ensino a virar uma mulher diferente.<br>
+                        Eu te ajudo a parar de esconder essa.
                     </p>
                     <ul class="about-credentials">
                         <li>Formação em escola francesa</li>
-                        <li>Especialização Bela Artes (SP)</li>
-                        <li>Nova formação na França (2026)</li>
+                        <li>Especialização Belas Artes — SP</li>
+                        <li>Nova formação na França — 2026</li>
                         <li>Criadora da Mentoria 360</li>
-                        <li>Experiência com público de luxo</li>
+                        <li>Anos atendendo público de luxo</li>
                         <li>Vivência em Dubai e Europa</li>
                     </ul>
                 </div>
@@ -1121,28 +1166,28 @@
     <!-- TESTIMONIALS -->
     <section class="testimonials">
         <div class="container">
-            <div class="section-label text-center">Quem já passou pelo Prisma</div>
-            <h2 class="section-title text-center">Histórias de quem decidiu mudar</h2>
+            <div class="section-label text-center">Histórias que ficaram comigo</div>
+            <h2 class="section-title text-center">Algumas mulheres que<br>atravessaram esse processo</h2>
             <div class="section-line center"></div>
 
             <div class="testimonials-grid">
                 <div class="testimonial-card fade-up">
                     <div class="testimonial-stars">★ ★ ★ ★ ★</div>
-                    <p>Eu sabia que era boa, mas não conseguia passar isso pros clientes. Na mentoria eu entendi o porquê. Mudei meu posicionamento e em um mês fechei um projeto de mais de R$100 mil.</p>
+                    <p>Eu sempre soube que era boa. O que eu não sabia era por que as pessoas não enxergavam isso na mesma velocidade. Quando entendi, mudou tudo. Hoje sou olhada de outro jeito — e me olho de outro jeito também.</p>
                     <div class="testimonial-author">Carolina M.</div>
-                    <div class="testimonial-role">Empresária no ramo da moda, São Paulo</div>
+                    <div class="testimonial-role">São Paulo</div>
                 </div>
                 <div class="testimonial-card fade-up">
                     <div class="testimonial-stars">★ ★ ★ ★ ★</div>
-                    <p>O treino de negociação me abriu os olhos. Eu ficava me explicando demais e dando desconto sem ninguém pedir. Hoje cobro o dobro e ninguém questiona. Muito obrigada, Re.</p>
+                    <p>A Re tem uma forma de te ouvir que faz você se ouvir. Eu parei de baixar preço por medo, parei de me explicar demais, parei de pedir desculpa por ser quem eu sou. Foi quase silencioso. E foi tudo.</p>
                     <div class="testimonial-author">Patrícia R.</div>
-                    <div class="testimonial-role">Psicóloga, Rio de Janeiro</div>
+                    <div class="testimonial-role">Rio de Janeiro</div>
                 </div>
                 <div class="testimonial-card fade-up">
                     <div class="testimonial-stars">★ ★ ★ ★ ★</div>
-                    <p>Nunca imaginei que a forma como eu me vestia e me portava pudesse mudar tanto minha carreira. A Renilza me mostrou que a gente comunica autoridade antes de abrir a boca. Mudou tudo pra mim.</p>
+                    <p>Eu vim por causa da imagem. Saí com algo bem mais profundo. Hoje a forma como me visto, falo e ando combina com a vida que eu sempre quis construir — e que finalmente está vindo.</p>
                     <div class="testimonial-author">Fernanda L.</div>
-                    <div class="testimonial-role">Empresária no ramo da beleza, Belo Horizonte</div>
+                    <div class="testimonial-role">Belo Horizonte</div>
                 </div>
             </div>
         </div>
@@ -1151,46 +1196,50 @@
     <!-- PRICING -->
     <section class="pricing" id="investimento">
         <div class="container">
-            <div class="section-label text-center">Investimento</div>
-            <h2 class="section-title text-center">Dois caminhos, uma decisão</h2>
+            <div class="section-label text-center">Como entrar</div>
+            <h2 class="section-title text-center">Dois caminhos.<br><em class="serif" style="color: var(--gold); font-style: italic;">A mesma travessia.</em></h2>
             <div class="section-line center" style="background: var(--gold);"></div>
+            <p class="intimate text-center" style="max-width: 580px; margin: 0 auto 24px; color: var(--text-muted); font-size: 1.05rem;">
+                Você escolhe a profundidade.<br>
+                Eu cuido do resto.
+            </p>
 
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="pricing-name">Essencial</div>
-                    <div class="pricing-sessions">4 encontros individuais</div>
+                    <div class="pricing-sessions">Quatro encontros, um mês juntas</div>
                     <div class="pricing-value"><span>R$</span>6.997</div>
                     <div class="pricing-installment">ou 12x de R$ 699,70</div>
                     <ul class="pricing-features">
-                        <li>4 sessões individuais de 1h (Zoom)</li>
-                        <li>Diagnóstico completo de imagem</li>
-                        <li>Manifesto profissional</li>
-                        <li>Guia de códigos visuais</li>
-                        <li>Frase de posicionamento</li>
-                        <li>Exercícios práticos entre sessões</li>
-                        <li>Suporte WhatsApp por 30 dias</li>
+                        <li>4 encontros íntimos de 1h, no Zoom</li>
+                        <li>Um olhar honesto sobre sua imagem</li>
+                        <li>Seu manifesto — escrito com você</li>
+                        <li>Guia de códigos visuais que te elevam</li>
+                        <li>A frase que vira sua assinatura</li>
+                        <li>Pequenos exercícios entre as sessões</li>
+                        <li>WhatsApp aberto por 30 dias</li>
                     </ul>
-                    <a href="#contato" class="cta-btn cta-btn-outline" style="display:block;">Quero o Essencial</a>
+                    <a href="#contato" class="cta-btn cta-btn-outline" style="display:block;">Começar pelo Essencial</a>
                 </div>
 
                 <div class="pricing-card featured">
                     <div class="pricing-name">Completo</div>
-                    <div class="pricing-sessions">8 encontros individuais</div>
+                    <div class="pricing-sessions">Oito encontros, dois meses de presença</div>
                     <div class="pricing-value"><span>R$</span>9.997</div>
                     <div class="pricing-installment">ou 12x de R$ 999,70</div>
                     <ul class="pricing-features">
-                        <li>8 sessões individuais de 1h (Zoom)</li>
-                        <li>Diagnóstico completo de imagem</li>
-                        <li>Manifesto profissional</li>
+                        <li>8 encontros íntimos de 1h, no Zoom</li>
+                        <li>Um olhar honesto sobre sua imagem</li>
+                        <li>Seu manifesto — escrito com você</li>
                         <li>Guia de códigos visuais por ocasião</li>
-                        <li>Frase de posicionamento magnética</li>
-                        <li>Simulações de negociação</li>
-                        <li>Treino de apresentação gravado</li>
-                        <li>Plano de networking estratégico</li>
-                        <li>Plano de expansão 12 meses</li>
-                        <li>Suporte WhatsApp por 60 dias</li>
+                        <li>A frase que te apresenta antes de você</li>
+                        <li>A conversa sobre dinheiro, ensaiada com calma</li>
+                        <li>Apresentação gravada e revisada com cuidado</li>
+                        <li>Sua rede dos próximos meses, mapeada</li>
+                        <li>Um plano honesto pros próximos 12 meses</li>
+                        <li>WhatsApp aberto por 60 dias</li>
                     </ul>
-                    <a href="#contato" class="cta-btn" style="display:block;">Quero o Completo</a>
+                    <a href="#contato" class="cta-btn" style="display:block;">Atravessar o Completo</a>
                 </div>
             </div>
         </div>
@@ -1199,45 +1248,45 @@
     <!-- FAQ -->
     <section class="faq">
         <div class="container">
-            <div class="section-label text-center">Dúvidas frequentes</div>
-            <h2 class="section-title text-center">Perguntas que podem estar<br>na sua mente agora</h2>
+            <div class="section-label text-center">O que talvez você esteja se perguntando</div>
+            <h2 class="section-title text-center">Algumas dúvidas honestas<br>antes de você decidir</h2>
             <div class="section-line center"></div>
 
             <div class="faq-list">
                 <div class="faq-item">
-                    <button class="faq-question">A mentoria é só para arquitetas?</button>
+                    <button class="faq-question">Isso é só pra arquitetas?</button>
                     <div class="faq-answer">
-                        <p>Não. O Método Prisma nasceu com foco em arquitetas, mas funciona pra qualquer profissional que quer transformar sua identidade, comportamento e imagem. Se você é advogada, dentista, designer ou qualquer profissional liberal que precisa se posicionar melhor, cabe aqui.</p>
+                        <p>Não. Esse trabalho nasceu olhando pra arquitetas, mas as mulheres que mais se reconhecem aqui são as que sentem que carregam mais por dentro do que conseguem mostrar por fora — advogadas, médicas, empresárias, criativas. Se você é uma delas, é seu lugar.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">Preciso estar no Brasil para participar?</button>
+                    <button class="faq-question">Preciso morar no Brasil?</button>
                     <div class="faq-answer">
-                        <p>Não. Os encontros são via Zoom, então você pode estar em qualquer lugar. A parte de mapeamento de mercado a gente adapta pra sua cidade, seja no Brasil ou fora.</p>
+                        <p>Nada disso. A gente se encontra no Zoom. Eu mesma vivo entre cidades, então atender mulher em qualquer fuso virou parte do meu cotidiano. A leitura do seu contexto a gente ajusta junto.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">Qual a diferença entre o Essencial e o Completo?</button>
+                    <button class="faq-question">Qual a diferença real entre o Essencial e o Completo?</button>
                     <div class="faq-answer">
-                        <p>O Essencial tem 4 encontros e cobre identidade, posicionamento, imagem e leitura de mercado (fases 1 e 2). O Completo tem 8 encontros e vai além: inclui treino de negociação, simulações, networking e um plano de crescimento pra 12 meses (fases 3 e 4). Se você quer ir fundo, vai de Completo.</p>
+                        <p>O Essencial é uma passagem mais curta — quatro encontros para você se reconhecer, ajustar imagem e clarear o seu lugar. O Completo é uma travessia inteira: oito encontros, mais profundidade, treinos delicados de negociação, presença, networking e um plano honesto pros próximos 12 meses. Se quer ir até o fim, é o Completo.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">Quanto tempo dura cada encontro?</button>
+                    <button class="faq-question">Como é o ritmo dos encontros?</button>
                     <div class="faq-answer">
-                        <p>1 hora por sessão, uma vez por semana. O Essencial dura 1 mês, o Completo dura 2. Entre um encontro e outro você tem exercícios pra fazer e acesso ao meu WhatsApp pra tirar dúvidas.</p>
+                        <p>Uma hora, uma vez por semana. O Essencial dura cerca de um mês. O Completo, dois. No meio, você tem exercícios pra habitar — e o meu WhatsApp pra quando precisar de um respiro ou de uma resposta.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">E se eu não gostar?</button>
+                    <button class="faq-question">E se, na primeira sessão, eu sentir que não é pra mim?</button>
                     <div class="faq-answer">
-                        <p>Depois do primeiro encontro você tem 7 dias pra decidir. Se achar que não é pra você, devolvemos tudo. Sem burocracia.</p>
+                        <p>Você tem sete dias pra dizer isso pra mim. Devolvo tudo, sem perguntas. Esse trabalho só faz sentido se for vontade de duas — e aqui eu prefiro mil vezes uma mulher honesta do que uma vaga preenchida.</p>
                     </div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">Posso parcelar?</button>
+                    <button class="faq-question">Dá pra parcelar?</button>
                     <div class="faq-answer">
-                        <p>Pode. Essencial em até 12x de R$ 699,70, Completo em até 12x de R$ 999,70 no cartão. Se preferir PIX à vista, tem condição especial.</p>
+                        <p>Dá. Até 12x no cartão. Se preferir PIX à vista, conversamos uma condição mais cuidadosa.</p>
                     </div>
                 </div>
             </div>
@@ -1247,10 +1296,10 @@
     <!-- FINAL CTA -->
     <section class="final-cta" id="contato">
         <div class="container">
-            <h2 class="serif">Você já sabe quem quer ser.<br>Agora é hora de <em style="color: var(--gold); font-style: italic;">mostrar</em>.</h2>
-            <p>As vagas são limitadas porque a mentoria é individual. Se essa página está no ar, ainda tem espaço.</p>
-            <a href="https://wa.me/5511950291364?text=Oi%20Renilza%2C%20quero%20saber%20mais%20sobre%20o%20M%C3%A9todo%20Prisma!" class="cta-btn">Falar com a Renilza no WhatsApp</a>
-            <div class="guarantee">Garantia de 7 dias. Se não fizer sentido pra você, devolvemos tudo.</div>
+            <h2 class="serif">Você já sabe quem é.<br>Talvez só precise de alguém<br>pra te <em style="color: var(--gold); font-style: italic;">lembrar</em>.</h2>
+            <p>Eu atendo poucas mulheres por mês — não porque é estratégia, é porque é o que cabe em mim. Se essa página ainda está aqui, é porque ainda tem espaço pra você.</p>
+            <a href="https://wa.me/5511950291364?text=Oi%20Renilza%2C%20quero%20saber%20mais%20sobre%20o%20M%C3%A9todo%20Prisma!" class="cta-btn">Conversar comigo no WhatsApp</a>
+            <div class="guarantee">Sete dias pra sentir se faz sentido. Se não fizer, devolvo tudo — sem ruído.</div>
         </div>
     </section>
 
@@ -1258,7 +1307,7 @@
     <footer class="footer">
         <div class="container">
             <p>Método Prisma &copy; 2026 — <a href="https://instagram.com/renilzamirandaa" target="_blank">@renilzamirandaa</a></p>
-            <p style="margin-top: 8px; font-size: 0.72rem;">Renilza Miranda — Consultora de Imagem | Formação Escola Francesa</p>
+            <p style="margin-top: 8px; font-size: 0.72rem;">Renilza Miranda · imagem, presença e a forma como você se enxerga</p>
         </div>
     </footer>
 
